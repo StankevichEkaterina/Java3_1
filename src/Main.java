@@ -1,19 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-
-        //входные данные
-
-        int ticketPrice = 100;
-        int sumForBonus = 20;
-        boolean bonus = ticketPrice >= sumForBonus;
+        BonusMilesService service = new BonusMilesService();
+        int price = 10_000;
+        int miles = service.calculate(price);
+        System.out.println("Начисленные мили: " + miles);
 
 
-        //логика программы
-        int mileBonus;
-        if (bonus) ;
-        {
-            mileBonus = ticketPrice / sumForBonus * 1;
-        }
-        System.out.println("Начисленные мили: " + mileBonus);
     }
 }
